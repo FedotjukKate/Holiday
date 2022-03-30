@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h2 align="center">Таблица клиентов</h2>
+    <table border="2">
+        <tr>
+            <td style="font-size: 25px;" bgcolor="LightCyan" width="150px">Полное имя</td>
+            <td style="font-size: 25px;" bgcolor="LightCyan" width="300px">Номер телефона</td>
+            <td style="font-size: 25px;" bgcolor="LightCyan" width="700px">Email</td>
+            <td style="font-size: 25px;" bgcolor="LightCyan" width="700px">Возраст</td>
+        </tr>
+        {% for item in clients %}
+            <tr>
+                <td>{{item["full_name"]}}</td>
+                <td>{{item["phone"]}}</td>
+                <td>{{item["email"]}}</td>
+                <td>{{item["age"]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
